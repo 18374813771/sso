@@ -1,0 +1,15 @@
+security:
+  oauth2:
+    client:
+      clientId: dhx1
+      clientSecret: dhxsecret1
+      user-authorization-uri: http://127.0.0.1:8083/server/oauth/authorize #跳到服务器请求授权的uri
+      access-token-uri: http://127.0.0.1:8083/server/oauth/token #请求令牌的uri
+    resource:
+      jwt:
+        key-uri: http://127.0.0.1:8083/server/oauth/token_key #返回jwt,请求密钥uri
+
+server:
+  port: 8081
+  context-path: /client1
+
